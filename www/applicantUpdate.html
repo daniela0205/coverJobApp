@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+        <title>CoverJob App</title>
+    </head>
+    <body>
+      <header>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">CoverJob</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <!-- Navbar links -->
+         <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Employer</a>
+            </li>
+          </ul>
+        </div> -->
+
+      </nav>
+    </header>
+    <section>
+      <div class="jumbotron text-center"> 
+        <nav class="navbar-brand">
+      <!-- <form> -->
+          <h4>Update applicants  </h4>
+          
+          <label>Reference of Applicantion</label>
+          <input type="text" class="form-control" id="idApplicants">
+
+         
+          
+
+        <div class="form-group">
+          <label >status</label>
+         
+          <select class="custom-select mr-sm-2" id="statusApplicants">
+            <option selected>Choose...</option>
+            <option value="accept">Accept</option>
+            <option value="standby">Standby</option>
+            <option value="wait">Wait</option>
+            <option value="approved">Approved</option>
+            <option value="reject">Reject</option>
+            <option value="done">Done</option>
+
+          </select>
+        
+      </div>
+
+      <div class="form-group">
+        <label >ranking</label>
+       
+        <select class="custom-select mr-sm-2" id="rankingApplicants">
+          <option selected>Choose...</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      
+    </div>
+
+    <label>Feed Back</label>
+      <input type="text" class="form-control" id="fbApplicants">
+
+
+          
+        
+        <a href="login.html" class="btn btn-success" role="button">Cancel</a>
+        <button class="btn btn-success" onclick="registerUser()">Accept</button> <br>
+        
+      <!-- </form> -->
+    </nav>
+    </div>
+    </section>
+   
+ 
+    <footer class="bg-dark text-white mt-4">
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#"> coberjob.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script> 
+    <script src="./js/jquery-3.4.1.slim.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script> 
+      
+   
+        
+    </body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+        <title>CoverJob App</title>
+    </head>
+    <body>
+  
+      <header>
+  
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">CoverJob</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <!-- Navbar links -->
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Setting
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profile.html">Profile</a>
+                <a class="dropdown-item" href="cv.html">CV</a>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Employer</a>  
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </header>
+    <section>
+      <div class="jumbotron text-center"> 
+        <nav class="navbar-brand">
+      <form>
+        <div class="form-group">            
+          <h4>CV Information</h4>
+        </div>
+         
+        <div class="form-group">
+          <label for="exampleInputEmail1">Level Education</label>
+          <div class="form-group">
+          <select class="custom-select mr-sm-2" id="selectLevelEdu">
+            <option selected>Choose...</option>
+            <option value="1">Primary school</option>
+            <option value="2">Secondary school</option>
+            <option value="3">College Degree</option>
+            <option value="4">Master Degree</option>
+            <option value="5">Doctor Degree</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Certification</label>
+          <div class="form-group">
+          
+            <textarea class="form-control" id="certification" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">CV</label>
+          <div class="form-group">
+           
+            <input type="file" class="form-control-file" id="fileID">
+          </div>
+        </div>
+        
+        <a href="principal.html" class="btn btn-success" role="button">Cancel</a>
+        <button type="submit" class="btn btn-success" onclick="updateCV()">Acept</button> 
+
+         
+      </form>
+    </nav>
+    </div>
+    </section>
+   
+
+    <footer class="bg-dark text-white">
+              <div class="footer-copyright text-center py-5">© 2020 Copyright:
+              <a href="https://mdbootstrap.com/education/bootstrap/"> .com</a>
+             </div>
+              <!-- Copyright -->
+    </footer>
+      
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="./js/jquery-3.4.1.slim.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script> 
+            
+</body>
+
+</html>

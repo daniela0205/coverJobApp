@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+        <title>CoverJob App</title>
+    </head>
+    <body>
+  
+      <header>
+  
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">CoverJob</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <!-- Navbar links -->
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Setting
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="principal.html">Back</a>
+                <!-- <a class="dropdown-item" href="#">Jobs</a> -->
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+
+            
+          </ul>
+        </div>
+
+      </nav>
+    </header>
+  
+   <div class="jumbotron text-center ">
+    
+ 
+    
+    <ul class="nav nav-tabs justify-content-center" id="myTab2" role="tablist">
+      <li class="nav-item">
+        <a class="btn btn-success active" id="employer-tab" data-toggle="tab" href="#employer-profile" role="tab" aria-controls="employer-profile" aria-selected="true">Information Employer </a>
+      </li>&nbsp&nbsp
+
+      <li class="nav-item">
+        <a class="btn btn-success" id="postjob-tab" data-toggle="tab" href="#post-job" role="tab" aria-controls="post-job" aria-selected="false">Post Jobs</a>
+      </li> &nbsp&nbsp
+
+      <li class="nav-item">
+        <a class="btn btn-success" id="view-job-tab" data-toggle="tab" href="#view-job" role="tab" aria-controls="view-job" aria-selected="false">View Jobs</a>
+      </li>
+     
+    </ul>
+    
+ 
+    <div class="tab-content" id="myTabContent">
+
+      
+  
+        <div class="tab-pane fade show active" id="employer-profile" role="tabpanel" aria-labelledby="employer-tab">
+          <div class="jumbotron text-center"> 
+            <nav class="navbar-brand"> 
+          <form>
+            <div class="form-group">            
+              <h4>Employeer</h4>
+            </div>
+            <div class="form-group">
+              <label >Company Name *</label>
+              <input type="text" class="form-control" id="company" required>
+            </div>
+            <div class="form-group">
+              <label >Contact Name *</label>
+              <input type="text" class="form-control" id="nameContact" required>
+            </div>
+            <div class="form-group">
+              <label >Contact Phone</label>
+              <input type="text" class="form-control" id="contactPhone" required>
+            </div>
+            
+            
+            <a href="login.html" class="btn btn-success" role="button">Cancel</a>
+            <button type="submit" class="btn btn-success" onclick="registerEmployer()">Acept</button> 
+    
+             
+          </form>
+        </nav>
+      </div>
+
+        </div>
+      
+        <div class="tab-pane fade" id="post-job" role="tabpanel" aria-labelledby="postjob-tab">
+          <div class="jumbotron text-center"> 
+            <nav class="navbar-brand"> 
+          <!-- <form> -->
+            <div class="form-group">            
+              <h4>Post new Job</h4>
+            </div>
+            
+              <label> Job Tittle *</label>
+              <input type="text" class="form-control" id="jobTitle" required>
+
+              <label >Category</label>
+              <input type="text" class="form-control" id="jobCategory">
+            
+            <div class="form-group">
+              <label >Details</label>
+              <input type="text" class="form-control" id="jobDetails">
+            </div>
+            <div class="form-group">
+              <label >Location / Eircode</label>
+              <input type="text" class="form-control" id="jobEircode" required>
+            </div>
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" class="form-control" id="jobCity" required>
+            </div>
+            <div class="form-group">
+              <label>Start Date</label>
+              <input type="date" class="form-control" id="jobStartDay" required>
+           
+            </div>
+            <div class="form-group">
+              <label>Start Time</label>
+              <input type="time" class="form-control" id="jobStartTime" required>
+            </div>
+            <div class="form-group">
+              <label>End Date</label>
+              <input type="date" class="form-control" id="jobendDay"required>
+            </div>
+            <div class="form-group">
+              <label >End Time</label>
+              <input type="time" class="form-control" id="jobEndTime" required>
+            </div>
+            <div class="form-group">
+              <label >Payment per hour</label>
+              <input type="number" class="form-control" id="jobPayment">
+            </div>
+            
+            
+            
+            <a href="employer.html" class="btn btn-success" role="button">Cancel</a>
+            <button type="submit" class="btn btn-success" onclick="postJob()">Accept</button> 
+    
+             
+          <!-- </form> -->
+        </nav>
+      </div>
+      </div>
+
+
+      <div class="tab-pane fade" id="view-job" role="tabpanel" aria-labelledby="view-job-tab">
+        <div class="jumbotron text-center"> 
+          <nav class="navbar-brand"> 
+
+            <table class="table table-striped"  id="tableJobPost" onload="showJobsPost()">
+     
+            </table>
+       
+      </nav>
+    </div>
+    </div>
+    
+      
+   
+     </div> 
+
+
+    </div>   
+
+        <footer class="bg-dark text-white">
+              <div class="footer-copyright text-center py-5">© 2020 Copyright:
+              <a href="https://mdbootstrap.com/education/bootstrap/"> .com</a>
+             </div>
+              <!-- Copyright -->
+        </footer>
+      
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="./js/jquery-3.4.1.slim.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script> 
+            
+</body>
+
+</html>
